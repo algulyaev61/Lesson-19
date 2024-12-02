@@ -1,3 +1,9 @@
+class Plant:
+    edible = False
+
+    def __init__(self, name):
+        self.name = name
+
 class Animal:
     alive = True
     fed = False
@@ -5,20 +11,13 @@ class Animal:
     def __init__(self, name):
         self.name = name
 
-    def eat(self, food):
-        self.food = food
-        edible = False
-        if food is edible:
+    def eat(self, food: Plant):
+        if food. edible:
             print(f"{self.name} съел {food.name}")
+            self.fed = True
         else:
-            alive = False
             print(f"{self.name} не стал есть {food.name}")
-
-class Plant:
-    edible = False
-
-    def __init__(self, name):
-        self.name = name
+            self.alive = False
 
 class Mammal(Animal):
     edible = False
